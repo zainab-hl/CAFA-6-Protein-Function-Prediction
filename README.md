@@ -22,10 +22,10 @@ Models are trained on annotated protein datasets and evaluated using weighted F1
 
 ### Approach:
 
-1- Encode protein sequences using ESM2 transformer
-2- Apply mean pooling to obtain sequence-level embeddings
-3- Feed embeddings into separate linear classifiers for MF, BP, and CC
-4- Train each head for multi-label GO term prediction
+- Encode protein sequences using ESM2 transformer.
+- Apply mean pooling to obtain sequence-level embeddings.
+- Feed embeddings into separate linear classifiers for MF, BP, and CC.
+- Train each head for multi-label GO term prediction.
 
 #### Post-Processing: Hierarchical Consistency
 Objective: Enforce the Hard Propagation Rule:
@@ -33,10 +33,10 @@ Objective: Enforce the Hard Propagation Rule:
 𝑃(parent)=max(𝑃(parent),𝑃(child))  why? 
 because, if a model predicts a specific function (Child), it must logically predict the broader function (Parent) with equal or higher probability.
 
-1- Build GO DAG: Parse go-basic.obo and precompute ancestors for all GO terms.
-2- Combine previous ESM2 model predictions with GOA annotations.
-3- Apply IA and Taxonomy Boosts: Optionally adjust scores using information accretion weights and protein taxonomy data.
-4- Hierarchical Propagation:
+- Build GO DAG: Parse go-basic.obo and precompute ancestors for all GO terms.
+- Combine previous ESM2 model predictions with GOA annotations.
+- Apply IA and Taxonomy Boosts: Optionally adjust scores using information accretion weights and protein taxonomy data.
+- Hierarchical Propagation:
 
    - Positive propagation: ensure parent scores ≥ child scores.
    - Negative propagation: constrain child scores ≤ parent scores.
