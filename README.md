@@ -47,5 +47,13 @@ because, if a model predicts a specific function (Child), it must logically pred
 - Achieved a final CAFA6 weighted F1 score of 0.366.
 
 
+## Achievement
 
+the result: 🤗 a silver medal
+
+<p align="center">
+  <img src="Zainab%20Halhoul%20-%20CAFA%206%20Protein%20Function%20Prediction%20(1).png"
+       alt="CAFA 6 Silver Medal Certificate"
+       width="800">
+</p>
 
