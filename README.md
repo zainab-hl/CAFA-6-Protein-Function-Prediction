@@ -44,7 +44,7 @@ because, if a model predicts a specific function (Child), it must logically pred
 
 - Used only half of the training dataset.
 - Trained each GO aspect for 10 epochs to reduce runtime while testing the approach.
-- Achieved a final CAFA6 weighted F1 score of 0.366.
+- Achieved a final CAFA6 weighted F1 score of 0.366 and 0.395 after private data test.
 
 
 ## Achievement
